@@ -1,0 +1,33 @@
+ 
+.submit{
+    padding:10px;
+    width:200px;
+    background-color: red;
+    border-radius:20px;
+    border:1px solid white;
+    color: white;
+    font-weight:500;
+    font-size:20px
+}
+.submit:hover{
+   
+    background-color:#CCB686;
+   
+}
+.location{
+     
+    margin-top:7%;
+}
+.text{
+    color:red
+}
+.carwash{
+    font-size:30px;
+    font-weight:bold
+}
+.car-submit{
+    
+    background: rgb(36, 41, 73);
+    opacity: .9;
+    top: 0;
+}

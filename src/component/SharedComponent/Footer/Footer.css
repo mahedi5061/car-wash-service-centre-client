@@ -1,0 +1,13 @@
+.contactNumber{
+    background-color:red;
+    padding:10px;
+    border:1px solid black;
+    border-radius:5px;
+    color:white;
+    font-weight:400;
+}
+.footer-area{
+    background-color:rgb(16,16,23);
+    padding:30px;
+     
+}

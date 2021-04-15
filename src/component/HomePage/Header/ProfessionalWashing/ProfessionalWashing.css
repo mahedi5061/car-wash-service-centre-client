@@ -1,0 +1,29 @@
+.professional{
+    font-size:40px;
+    font-weight:bold;
+    color:rgb(7, 1, 14);
+    margin-top: 15%;
+}
+.paragraph{
+    font-size:18px
+}
+.call{
+    color:rgb(7, 1, 14);
+    font-weight:bold
+}
+.number{
+    color:rgb(238, 33, 33);
+    font-weight:bold
+}
+.btn-design{
+    width:200px;
+    background-color:red;
+    border-radius:20px;
+    padding:15px;
+    border:1px solid white;
+    color:white;
+    font-weight:500
+}
+.btn-design:hover{
+    background-color:black
+}

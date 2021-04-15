@@ -1,0 +1,21 @@
+.imageSize{
+    width: 1200px;
+    margin-left: 20%;
+}
+.paragraph{
+    text-align: justify;  
+}
+.heading{
+    font-family: 'Roboto', sans-serif;
+    color:#3A4256;
+}
+.getAppoint{
+    background-color:#13D1CE;
+    padding:5px;
+    border:1px solid white;
+    color:white;
+    font-weight: 500;
+    cursor:pointer;
+    
+}
+ 
