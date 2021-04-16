@@ -12,7 +12,7 @@ const AppointmentByDate = ({appointments}) => {
              <AppointmentShortList appointments={appointments} ></AppointmentShortList>
             :
             <div className="p-5">
-                <h4 className="lead text-center">No Appointments for this Date</h4>
+                <h4 className="lead text-center">Welcome to our Dashboard</h4>
             </div>
         }
     </div>

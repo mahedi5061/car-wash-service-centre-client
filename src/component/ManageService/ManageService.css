@@ -1,0 +1,12 @@
+.manageService{
+    margin-left: -15%;
+    color:green;
+    font-size:25px;
+    font-weight:500;
+    margin-top:2%
+}
+.deleteBtn{
+    color: red;
+    cursor: pointer;
+   
+}

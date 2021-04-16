@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -17,13 +17,28 @@ import PrivateRoute from "./component/PrivateRoute/PrivateRoute";
 import Books from "./component/Booked/Books/Books";
  
 import BookLists from "./component/Booked/BooksList/BookLists";
-import BookedSingleProduct from "./component/Booked/BookedSingleProduct/BookedSingleProduct";
+import Book from "./component/Booked/Book/Book";
+import ManageService from "./component/ManageService/ManageService";
+import Admin from "./component/Admin/Admin";
+ 
 export const userContext = createContext();
+export const userOrder=createContext();
 
 function App() {
   const [login, setLogin] = useState({});
+  const [userServices,setUserServices] = useState([]);
+   
+  useEffect(() => {
+    fetch('http://localhost:8000/allProduct')
+    .then(res=>res.json())
+    .then(data =>{
+        setUserServices(data)
+    })
+},[])
+
   return (
     <userContext.Provider value={[login, setLogin]}>
+    <userOrder.Provider value={[userServices,setUserServices]}>
        <Router>
          <Switch>
            <Route path="/home">
@@ -33,9 +48,9 @@ function App() {
            <Route path="/login">
              <Login></Login>
            </Route>
-           <Route path="/dashboard">
+           <PrivateRoute path="/dashboard">
              <Dashboard></Dashboard>
-           </Route>
+           </PrivateRoute>
            
            <Route path="/addDoctor">
           <AddService></AddService>
@@ -44,16 +59,24 @@ function App() {
             <Review></Review>
           </Route>
 
-          <Route path="/books">
+          <PrivateRoute path="/books/:id">
             <Books></Books>
-          </Route>
+          </PrivateRoute>
 
-          <Route path="/booklists">
+          <PrivateRoute path="/booklists">
              <BookLists></BookLists>
+          </PrivateRoute>
+
+          <Route path="/book">
+            <Book></Book>
           </Route>
 
-          <Route path="/bookService/:id">
-              <BookedSingleProduct></BookedSingleProduct>
+          <Route path="/manageservice">
+              <ManageService></ManageService>
+          </Route>
+
+          <Route path="/addAdmin">
+            <Admin></Admin>
           </Route>
  
           <Route path="/prescriptions">
@@ -69,6 +92,7 @@ function App() {
            </Route>
          </Switch>
        </Router>
+       </userOrder.Provider>
        </userContext.Provider>
   );
 }

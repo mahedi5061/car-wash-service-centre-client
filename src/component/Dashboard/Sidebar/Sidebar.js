@@ -8,16 +8,16 @@ import { userContext } from '../../../App';
 
 const Sidebar = () => {
     const [login,setLogin]=useContext(userContext)
-    const [isDoctor, setIsDoctor] = useState(false);
+    const [isAdmin, setIsAdmin] = useState(false);
 
     useEffect(() => {
-        fetch('http://localhost:7000/isDoctor', {
+        fetch('http://localhost:8000/isAdmin', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ email: login.email })
         })
             .then(res => res.json())
-            .then(data => setIsDoctor(data));
+            .then(data => setIsAdmin(data));
     }, [])
 
     return (
@@ -30,7 +30,7 @@ const Sidebar = () => {
             </li>
 
             <li>
-                <Link to="/books" className="text-white">
+                <Link to="/book" className="text-white">
                     <FontAwesomeIcon icon={faCartPlus} /> <span>Book</span> 
                 </Link>
             </li>
@@ -50,23 +50,27 @@ const Sidebar = () => {
                     <FontAwesomeIcon icon={faList} /> <span>Order List</span>
                 </Link>
             </li>
-            <li>
+           {
+               isAdmin && <div>
+               <li>
                 <Link to="/addDoctor" className="text-white">
                     <FontAwesomeIcon icon={faPlus} /> <span>Add Service</span>
                 </Link>
             </li>
 
             <li>
-                <Link to="/addDoctor" className="text-white">
+                <Link to="/addAdmin" className="text-white">
                     <FontAwesomeIcon icon={faUserPlus} /> <span>Make Admin</span>
                 </Link>
             </li>
             
             <li>
-                <Link to="/doctor/setting" className="text-white" >
+                <Link to="/manageservice" className="text-white" >
                   <FontAwesomeIcon icon={faThLarge} /> <span>Manage Service</span>
                 </Link>
             </li>
+               </div>
+           }
         </ul>
         <div>
             <Link to="/" className="text-white"><FontAwesomeIcon icon={faSignOutAlt} /> <span>Logout</span></Link>

@@ -66,7 +66,7 @@ const StripePayment = ({handlePaymentSuccess}) => {
       setPaymentSuccess(null)
     } else {
       setPaymentSuccess("Your Order is Successfully Complete !!");
-      handlePaymentSuccess(paymentMethod.id);
+      handlePaymentSuccess(paymentMethod.card.brand);
       setPaymentError(null);
       console.log('[PaymentMethod]', paymentMethod);
     }
