@@ -38,7 +38,7 @@ const Books = () => {
 
         }
 
-        fetch('http://localhost:8000/shipments', {
+        fetch('https://stark-fjord-92699.herokuapp.com/shipments', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -52,7 +52,7 @@ const Books = () => {
 
     }
     // useEffect(() => {
-    //     fetch('http://localhost:8000/product/'+id)
+    //     fetch('https://stark-fjord-92699.herokuapp.com/product/'+id)
     //         .then(res => res.json())
     //         .then(data => {
     //             setShipmentProduct(data[0])

@@ -11,7 +11,7 @@ const OrderList = () => {
  
     //loaded user orders information matching by email.
     useEffect(() => {
-        fetch('http://localhost:8000/booklistByAdmin', {
+        fetch('https://stark-fjord-92699.herokuapp.com/booklistByAdmin', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({email: login.email})
@@ -21,7 +21,7 @@ const OrderList = () => {
     }, [])
 
     // useEffect(() => {
-    //     fetch('http://localhost:8000/showCustomersOrder?email='+login.email)
+    //     fetch('https://stark-fjord-92699.herokuapp.com/showCustomersOrder?email='+login.email)
     //     .then(res=>res.json())
     //     .then(data=>setOrderProduct(data))
     // },[])

@@ -9,7 +9,7 @@ const ManageService = () => {
     const [userServices,setUserServices] = useContext(userOrder);
     const [deleteItem,setDeleteItem]=useState("")
     const deleteService=(id) => {
-        fetch('http://localhost:8000/productDelete/'+id,{
+        fetch('https://stark-fjord-92699.herokuapp.com/productDelete/'+id,{
             method: 'DELETE',
         })
         .then(res=>res.json())
