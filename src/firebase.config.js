@@ -1,10 +1,10 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyCmT0PEBAZCYxq_e2BCF2bX5wAiPrEZxiQ",
-  authDomain: "car-washing-system.firebaseapp.com",
-  projectId: "car-washing-system",
-  storageBucket: "car-washing-system.appspot.com",
-  messagingSenderId: "627654327127",
-  appId: "1:627654327127:web:53304fbeeeb7f22beb9c12"
+  apiKey: "AIzaSyDUmAyd6bAY3-TkQeKQnW6PWRSzwTXgG4I",
+    authDomain: "car-wash-service-system.firebaseapp.com",
+    projectId: "car-wash-service-system",
+    storageBucket: "car-wash-service-system.appspot.com",
+    messagingSenderId: "356744608114",
+    appId: "1:356744608114:web:3e1ceb73e22a3cd83e45eb"
   };
    
   export default firebaseConfig;
