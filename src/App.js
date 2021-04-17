@@ -9,14 +9,14 @@ import './App.css';
 import AddService from "./component/AddService/AddService";
  
 import Dashboard from "./component/Dashboard/Dashboard/Dashboard";
-import Prescriptions from "./component/Dashboard/Prescriptions/Prescriptions";
+ 
 import Home from "./component/HomePage/Home/Home";
 import Login from "./component/Login/Login";
 import Review from "./component/Review/Review";
 import PrivateRoute from "./component/PrivateRoute/PrivateRoute";
 import Books from "./component/Booked/Books/Books";
  
-import BookLists from "./component/Booked/BooksList/BookLists";
+import OrderList from "./component/Booked/OrderList/OrderList";
 import Book from "./component/Booked/Book/Book";
 import ManageService from "./component/ManageService/ManageService";
 import Admin from "./component/Admin/Admin";
@@ -48,24 +48,24 @@ function App() {
            <Route path="/login">
              <Login></Login>
            </Route>
-           <PrivateRoute path="/dashboard">
+           <Route path="/dashboard">
              <Dashboard></Dashboard>
-           </PrivateRoute>
+           </Route>
            
-           <Route path="/addDoctor">
+           <Route path="/addService">
           <AddService></AddService>
            </Route>
           <Route path="/review">
             <Review></Review>
           </Route>
 
-          <PrivateRoute path="/books/:id">
+          <Route path="/books/:id">
             <Books></Books>
-          </PrivateRoute>
+          </Route>
 
-          <PrivateRoute path="/booklists">
-             <BookLists></BookLists>
-          </PrivateRoute>
+          <Route path="/orderlists">
+             <OrderList></OrderList>
+          </Route>
 
           <Route path="/book">
             <Book></Book>
@@ -79,14 +79,7 @@ function App() {
             <Admin></Admin>
           </Route>
  
-          <Route path="/prescriptions">
-            <Prescriptions></Prescriptions>
-          </Route>
-
-          <Route path="/prescriptions/:id">
-            <Prescriptions></Prescriptions>
-          </Route>
-
+          
            <Route exact path="/">
              <Home></Home>
            </Route>

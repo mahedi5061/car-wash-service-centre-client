@@ -46,14 +46,14 @@ const Sidebar = () => {
                 </Link>
             </li>
             <li>
-                <Link to="/prescriptions" className="text-white">
+                <Link to="/orderlists" className="text-white">
                     <FontAwesomeIcon icon={faList} /> <span>Order List</span>
                 </Link>
             </li>
-           {
-               isAdmin && <div>
+           {/* {
+               isAdmin && <div> */}
                <li>
-                <Link to="/addDoctor" className="text-white">
+                <Link to="/addService" className="text-white">
                     <FontAwesomeIcon icon={faPlus} /> <span>Add Service</span>
                 </Link>
             </li>
@@ -69,8 +69,8 @@ const Sidebar = () => {
                   <FontAwesomeIcon icon={faThLarge} /> <span>Manage Service</span>
                 </Link>
             </li>
-               </div>
-           }
+               {/* </div>
+           } */}
         </ul>
         <div>
             <Link to="/" className="text-white"><FontAwesomeIcon icon={faSignOutAlt} /> <span>Logout</span></Link>

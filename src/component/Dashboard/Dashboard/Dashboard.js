@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import  AppointmentByDate from '../AppointmentByDate/AppointmentByDate';
+ 
  import Sidebar from '../Sidebar/Sidebar';
  
  
@@ -11,22 +11,22 @@ const containerStyle = {
 }
 
 const Dashboard = () => {
-     const [login, setLogin]=useContext(userContext)
+    //  const [login, setLogin]=useContext(userContext)
     
-    const [appointments, setAppointments] = useState([]);
+    // const [appointments, setAppointments] = useState([]);
     
-    console.log(login.email)
+    // console.log(login.email)
     
     
-    useEffect(() => {
-        fetch('http://localhost:7000/appointmentsByDate', {
-            method: 'POST',
-            headers: { 'content-type': 'application/json' },
-            body: JSON.stringify({email: login.email})
-        })
-            .then(res => res.json())
-            .then(data => setAppointments(data))
-    }, [])
+    // useEffect(() => {
+    //     fetch('http://localhost:7000/appointmentsByDate', {
+    //         method: 'POST',
+    //         headers: { 'content-type': 'application/json' },
+    //         body: JSON.stringify({email: login.email})
+    //     })
+    //         .then(res => res.json())
+    //         .then(data => setAppointments(data))
+    // }, [])
 
     return (
         <section>
@@ -38,7 +38,7 @@ const Dashboard = () => {
                 </div>
                  
                 <div className="col-md-4 ">
-                    <AppointmentByDate appointments={appointments}></AppointmentByDate>
+                     <h2 className="text-center mt-5" style={{color: 'green',fontSize:"25px",fontWeight:"bold"}}>Welcome to our Dashboard</h2>
                 </div>
             </div>
         </section>
