@@ -20,6 +20,7 @@ import OrderList from "./component/Booked/OrderList/OrderList";
 import Book from "./component/Booked/Book/Book";
 import ManageService from "./component/ManageService/ManageService";
 import Admin from "./component/Admin/Admin";
+import BookingList from "./component/BookingList/BookingList";
  
 export const userContext = createContext();
 export const userOrder=createContext();
@@ -48,9 +49,9 @@ function App() {
            <Route path="/login">
              <Login></Login>
            </Route>
-           <Route path="/dashboard">
+           <PrivateRoute path="/dashboard">
              <Dashboard></Dashboard>
-           </Route>
+           </PrivateRoute>
            
            <Route path="/addService">
           <AddService></AddService>
@@ -63,9 +64,13 @@ function App() {
             <Books></Books>
           </Route>
 
-          <Route path="/orderlists">
+          <PrivateRoute path="/orderlists">
              <OrderList></OrderList>
-          </Route>
+          </PrivateRoute>
+
+          <PrivateRoute path="/booklists">
+            <BookingList></BookingList>
+          </PrivateRoute>
 
           <Route path="/book">
             <Book></Book>

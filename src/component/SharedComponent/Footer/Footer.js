@@ -1,9 +1,11 @@
 import React from 'react';
 import FooterColumn from '../FooterColumn/FooterColumn';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+ 
 import './Footer.css';
 import Aqualine from '../../../images/autocare.png'
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPhoneVolume } from '@fortawesome/free-solid-svg-icons'
  
  
 
@@ -38,7 +40,7 @@ Etiam consequat sem ullamcorper, euismod metus sit amet, tristique justo. Vestib
                     <FooterColumn key={4} menuTitle="Our Address" menuItems={ourAddress}> 
                         
                         <div className="mt-5">
-                            <h6 className="text-white">Call now</h6>
+                            <h6 className="text-white"><FontAwesomeIcon icon={faPhoneVolume}></FontAwesomeIcon> Call now</h6>
                             <button className="contactNumber">+88-01615742473</button>
                         </div>
                     </FooterColumn>

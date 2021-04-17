@@ -11,7 +11,7 @@ function Login() {
 
   const [newUser, setnewUser] = useState(false);
   const [login, setLogin] = useContext(userContext);
-  console.log(login)
+   
   const [user, setUser] = useState({
     isSignedIn: false,
     name: '',

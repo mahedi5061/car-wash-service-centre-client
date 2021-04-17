@@ -1,15 +1,15 @@
-.sidebar{
-    background-image: linear-gradient(40deg,#f54d30, #a70c0c);
+.sidebarDesign{
+    
     position: fixed;
+    background-color:  red;
     
 }
-.sidebar li{
+.sidebarDesign li{
     margin-bottom: 2em;
+    
 }
-.sidebar li:hover span{
+.sidebarDesign li:hover span{
     display: inline-block;
     transform: translate(5px);
 }
-.sidebar svg{
-    margin-right: 5px;
-}
+ 

@@ -15,10 +15,10 @@ const Testimonials = () => {
         <section className=" my-5 py-5">
            <div className="container">
                <div className="section-header">
-                   <h5 className="text text-uppercase">T e s t i m o n i a l</h5>
-                   <h1 className="customerSays">What Our Clients Says </h1>
+                   <h5 className="text text-center text-uppercase">T e s t i m o n i a l</h5>
+                   <h1 className="customerSays text-center">What Our Clients Says </h1>
                </div>
-               <div className="card-deck mt-5">
+               <div className="card-deck  row">
                     {
                         testimonials.map(testimonial => <Testimonial testimonial={testimonial} key={testimonial._id}/>)
                     }

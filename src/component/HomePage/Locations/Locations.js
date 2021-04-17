@@ -1,6 +1,8 @@
 import React from 'react';
 import './Locations.css';
-import washMachine from '../../../images/wash-machine.png'
+import washMachine from '../../../images/wash-machine.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 const Locations = () => {
     return (
         <section className="location d-flex justify-content-center  ">
@@ -12,13 +14,13 @@ const Locations = () => {
                 <h5 className="text">---Locations</h5>
                 <h1 className="carwash">Car Washing and Care Points</h1><br></br>
                 <h5>car washing point</h5>
-                <p>1353 Locust St, Kansas City, MO 64106</p>
+                <p><FontAwesomeIcon icon={faMapMarkerAlt}/> 1353 Locust St, Kansas City, MO 64106</p>
                  
                 <h5>car washing point</h5>
-                <p>1353 Locust St, Kansas City, MO 64106</p>
+                <p><FontAwesomeIcon icon={faMapMarkerAlt}/> 1353 Locust St, Kansas City, MO 64106</p>
                 
                 <h5>car washing point</h5>
-                <p>1353 Locust St, Kansas City, MO 64106</p>
+                <p><FontAwesomeIcon icon={faMapMarkerAlt}/> 1353 Locust St, Kansas City, MO 64106</p>
             </div>
             
             <div className="col-md-4"  >

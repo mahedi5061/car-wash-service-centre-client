@@ -7,7 +7,7 @@ import Autocare from '../../../../images/autocare.png'
 const NavbarComponent = () => {
     return (
         <div>
-            <Navbar  expand="lg">
+        <Navbar  expand="lg">
             <Link className="navbar-brand ms-5" to="/"> <img src={Autocare} style={{width:"70px"}}></img></Link>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
@@ -21,7 +21,7 @@ const NavbarComponent = () => {
                          
                     </Nav>
             </Navbar.Collapse>
-            </Navbar>
+            </Navbar> 
         </div>
     );
 };

@@ -8,7 +8,7 @@ import { faChevronCircleRight } from '@fortawesome/free-solid-svg-icons';
 const ProfessionalWashing = () => {
 
     return (
-      <section className="row">
+      <section  className="row mt-5">
      
     <div className="col-md-4 offset-md-1">
     <h2 className="professional">Professional washing and<br></br> cleaning of your car</h2><br></br>

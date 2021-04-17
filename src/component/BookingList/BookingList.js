@@ -1,37 +1,24 @@
+import { userContext } from '../../App';
 import React, { useContext, useEffect, useState } from 'react';
-import { userContext } from '../../../App';
-import Sidebar from '../../Dashboard/Sidebar/Sidebar';
-import './OrderList.css'
- 
+import Sidebar from '../Dashboard/Sidebar/Sidebar';
 
-const OrderList = () => {
-    
-    const [login, setLogin] = useContext(userContext);
-    const [allOrder, setAllOrder] = useState([]);
- 
-    //loaded user orders information matching by email.
+const BookingList = () => {
+    const [login, setLogin]=useContext(userContext)
+    const [orderProducts,setOrderProduct]=useState([])
     useEffect(() => {
-        fetch('https://stark-fjord-92699.herokuapp.com/booklistByAdmin', {
-            method: 'POST',
-            headers: { 'content-type': 'application/json' },
-            body: JSON.stringify({email: login.email})
-        })
-            .then(res => res.json())
-            .then(data => setAllOrder(data))
-    }, [])
-    
-    // console.log(allOrder)
-
-  
+        fetch('https://stark-fjord-92699.herokuapp.com/showCustomersOrder?email='+login.email)
+        .then(res=>res.json())
+        .then(data=>setOrderProduct(data))
+    },[])
      
     return (
         <div className="container-fluid row">
-            <div className="col-md-4"  >
+        <div className="col-md-4">
             <Sidebar></Sidebar>
-
-            </div>
+        </div>
+            
             <div className="col-md-8 tableData">
-            <h4 className="text-center pb-3" style={{color:"green"}}>Your Total Order is {allOrder.length}</h4>
+            <h4 className="text-center pb-3" style={{color:"green"}}>Your Total Order is {orderProducts.length}</h4>
             <table className="table table-borderless">
         <thead>
             <tr>
@@ -47,7 +34,7 @@ const OrderList = () => {
         </thead>
         <tbody>
             {
-                allOrder.map((pd, index) => 
+                orderProducts.map((pd, index) => 
                     
                 <tr>
                     <td><h5>{index + 1}</h5></td>
@@ -73,8 +60,9 @@ const OrderList = () => {
     </table>
 
             </div>
-        </div>
+            </div>
+        
     );
 };
 
-export default OrderList;
+export default BookingList;
