@@ -28,7 +28,7 @@ const OrderList = () => {
      console.log(allOrder)
     return (
         <div className="container-fluid row">
-            <div className="col-md-4"  >
+            <div className="col-md-2"  >
             <Sidebar></Sidebar>
 
             </div>

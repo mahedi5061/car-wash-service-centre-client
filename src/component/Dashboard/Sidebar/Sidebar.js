@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
  import './Sidebar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCog, faHome, faSignOutAlt,faUserPlus, faFileMedicalAlt, faCalendar, faGripHorizontal, faUsers, faCartPlus, faList, faCommentDots, faPlus, faThLarge } from '@fortawesome/free-solid-svg-icons';
+import {   faHome, faSignOutAlt,faUserPlus,   faCartPlus, faList, faCommentDots, faPlus, faThLarge } from '@fortawesome/free-solid-svg-icons';
 import { userContext } from '../../../App';
  
 
