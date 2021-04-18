@@ -19,7 +19,7 @@
     text-align: justify;
     padding-left: 50px;
     border-radius: 5px;
-    background-color:rgb(189, 143, 110);
+    background-color:rgb(72, 129, 235)
      
 }
 
@@ -57,9 +57,7 @@
      
      
 }
-.fb{
-    background: linear-gradient(to right, #1852b6 20%, #3e5ea8 50%, #9CB2CE 70%, #D4D8E8 85%);
-}
+ 
 .google{
-    background: linear-gradient(to right, #4285f4 20%, #ea4335 50%, #fbbc05 70%, #34a853 85%);
+    background-color: rgb(194, 9, 9);
 }

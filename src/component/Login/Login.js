@@ -117,7 +117,7 @@ function Login() {
 
         <input className="same-input login-btn" type="submit" value={newUser ? 'Create an account' : 'login'}></input><br></br>
         {
-          newUser ? <p>Already have an account? <u><span className="same-input" style={{ color: 'blue', cursor: 'pointer' }} onClick={() => setnewUser(!newUser)} >login</span></u></p> : <p>Don't have an account? <u><span className="same-input" style={{ color: 'green', cursor: 'pointer' }} onClick={() => setnewUser(!newUser)} >Create an account</span></u></p>
+          newUser ? <p>Already have an account? <u><span className="same-input" style={{ color: 'blue', cursor: 'pointer' }} onClick={() => setnewUser(!newUser)} >login</span></u></p> : <p>Don't have an account? <u><span className="same-input" style={{ color: 'white', cursor: 'pointer' }} onClick={() => setnewUser(!newUser)} >Create an account</span></u></p>
         }
         <br></br>
         <p style={{ color: 'red', fontSize: '15px' }}>{login.error}</p>

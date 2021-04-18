@@ -23,35 +23,20 @@ const Sidebar = () => {
     return (
         <div className="   sidebarDesign  justify-content-between  col-md-2 py-5 px-4" style={{ height: "100vh" }}>
             <ul className="list-unstyled">
-                <li>
+                <li style={{textDecoration: "none"}}>
                     <Link to="/home" className="text-white">
                         <FontAwesomeIcon icon={faHome} /> <span>Home</span>
                     </Link>
                 </li>
 
-                <li>
-                    <Link to="/book" className="text-white">
-                        <FontAwesomeIcon icon={faCartPlus} /> <span>Book</span>
-                    </Link>
-                </li>
-
-                <li>
-                    <Link to="/booklists" className="text-white">
-                        <FontAwesomeIcon icon={faList} /> <span>Booking List</span>
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/review" className="text-white">
-                        <FontAwesomeIcon icon={faCommentDots} /> <span>Review</span>
-                    </Link>
-                </li>
-                <li>
+               {
+                isAdmin ? <div>
+                   <li>
                     <Link to="/orderlists" className="text-white">
                         <FontAwesomeIcon icon={faList} /> <span>Order List</span>
                     </Link>
                 </li>
-                {/* {
-               isAdmin && <div> */}
+                
                 <li>
                     <Link to="/addService" className="text-white">
                         <FontAwesomeIcon icon={faPlus} /> <span>Add Service</span>
@@ -69,9 +54,31 @@ const Sidebar = () => {
                         <FontAwesomeIcon icon={faThLarge} /> <span>Manage Service</span>
                     </Link>
                 </li>
-                {/* </div>
-           } */}
-            </ul>
+              
+          
+           
+                   </div>:
+                   <div>
+                   <li>
+                    <Link to="/book" className="text-white">
+                        <FontAwesomeIcon icon={faCartPlus} /> <span>Book</span>
+                    </Link>
+                </li>
+
+                <li>
+                    <Link to="/booklists" className="text-white">
+                        <FontAwesomeIcon icon={faList} /> <span>Booking List</span>
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/review" className="text-white">
+                        <FontAwesomeIcon icon={faCommentDots} /> <span>Review</span>
+                    </Link>
+                </li>
+                   </div>
+                   
+               }
+               </ul>
             <div>
 
                 {
