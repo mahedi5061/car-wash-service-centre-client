@@ -21,6 +21,8 @@ import Book from "./component/Booked/Book/Book";
 import ManageService from "./component/ManageService/ManageService";
 import Admin from "./component/Admin/Admin";
 import BookingList from "./component/BookingList/BookingList";
+import ServiceNavbar from "./component/ServiceNavbar/ServiceNavbar";
+import About from "./component/About/About";
  
 export const userContext = createContext();
 export const userOrder=createContext();
@@ -84,7 +86,12 @@ function App() {
             <Admin></Admin>
           </Route>
  
-          
+      <Route path="/service">
+        <ServiceNavbar></ServiceNavbar>
+      </Route>
+          <Route path="/about">
+            <About></About>
+          </Route>
            <Route exact path="/">
              <Home></Home>
            </Route>

@@ -14,7 +14,7 @@ const NavbarComponent = () => {
                     <Nav className="ms-auto navbar">
                         <Nav.Link><Link to="/home"  className="ms-5 nv">Home</Link></Nav.Link>
                         <Nav.Link><Link to="/about"  className="ms-5 nv">About</Link></Nav.Link>
-                        <Nav.Link><Link to="/dentalService"  className="ms-5 nv">Services</Link></Nav.Link>
+                        <Nav.Link><Link to="/service"  className="ms-5 nv">Services</Link></Nav.Link>
                         <Nav.Link><Link to="/dashboard"  className="ms-5 nv  ">Dashboard</Link></Nav.Link>
                         
                         <Nav.Link><Link to="/contact"  className="ms-5 nv  ">Contact Us</Link></Nav.Link>
