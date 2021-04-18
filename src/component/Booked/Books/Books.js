@@ -20,8 +20,7 @@ const Books = () => {
     const onSubmit = data => {
         setShipmentUserData(data)
     };
-
-    console.log(shipmentProduct)
+ 
     const userDataById = userServices.find(userService => userService._id === id);
 
     const handleEventClick=()=>{
@@ -37,8 +36,8 @@ const Books = () => {
             orderDate: new Date(),
 
         }
-
-        fetch('https://stark-fjord-92699.herokuapp.com/shipments', {
+        
+        fetch('https://shrouded-lake-27228.herokuapp.com/shipments', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -52,13 +51,13 @@ const Books = () => {
 
     }
     // useEffect(() => {
-    //     fetch('https://stark-fjord-92699.herokuapp.com/product/'+id)
+    //     fetch('https://shrouded-lake-27228.herokuapp.com/product/'+id)
     //         .then(res => res.json())
     //         .then(data => {
     //             setShipmentProduct(data[0])
     //         })
     // }, [id])
-    console.log(shipmentProduct)
+    
     return (
         <div className="container-fluid row" >
             <div style={{ width: "600px" }}>

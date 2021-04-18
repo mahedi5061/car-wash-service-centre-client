@@ -18,7 +18,7 @@ const Admin = () => {
         formData.append('email', info.email);
      
 
-        fetch('https://stark-fjord-92699.herokuapp.com/addAdmin', {
+        fetch('https://shrouded-lake-27228.herokuapp.com/addAdmin', {
             method: 'POST',
             body: formData
         })

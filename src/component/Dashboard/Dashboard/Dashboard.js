@@ -3,8 +3,6 @@ import React, { useContext, useEffect, useState } from 'react';
  import Sidebar from '../Sidebar/Sidebar';
  
  
- import {userContext} from '../../../App'
-import Footer from '../../SharedComponent/Footer/Footer';
  
 const Dashboard = () => {
      

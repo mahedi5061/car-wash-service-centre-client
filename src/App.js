@@ -32,7 +32,7 @@ function App() {
   const [userServices,setUserServices] = useState([]);
    
   useEffect(() => {
-    fetch('https://stark-fjord-92699.herokuapp.com/allProduct')
+    fetch('https://shrouded-lake-27228.herokuapp.com/allProduct')
     .then(res=>res.json())
     .then(data =>{
         setUserServices(data)

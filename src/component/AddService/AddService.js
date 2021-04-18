@@ -26,7 +26,7 @@ const AddService = () => {
 
         //Image upload in Backend side system.
 
-        fetch('https://stark-fjord-92699.herokuapp.com/addService', {
+        fetch('https://shrouded-lake-27228.herokuapp.com/addService', {
             method: 'POST',
             body: formData
         })

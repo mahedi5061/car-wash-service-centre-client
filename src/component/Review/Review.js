@@ -27,7 +27,7 @@ const Review = () => {
 
         //Image upload in Backend side system.
 
-        fetch('https://stark-fjord-92699.herokuapp.com/addReviews', {
+        fetch('https://shrouded-lake-27228.herokuapp.com/addReviews', {
             method: 'POST',
             body: formData
         })
